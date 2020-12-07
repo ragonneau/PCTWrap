@@ -21,12 +21,12 @@ class PCTProblem:
         :param problem: Instance of pycutest.CUTEstProblem.
         """
         self._problem = problem
-        self.objectives = []
-        self.residuals = []
-        self.bounds, self.constraints = self.get_constraints()
         self.name = self._problem.name
         self.n = self._problem.n
         self.x0 = self._problem.x0
+        self.objectives = []
+        self.residuals = []
+        self.bounds, self.constraints = self.get_constraints()
 
     def clear_memory(self):
         """Clear from the memory of the class the objective function and merit
